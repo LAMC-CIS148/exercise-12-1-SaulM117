@@ -201,10 +201,15 @@ footer p {
 .schedule tfoot tr td {
     font-weight: bold;
     border-top: 1px solid #800000;
-    float: right;
 }
 
 /* Remove top border for the "Cost of a season luncheon ticket" row */
 .schedule tfoot tr:nth-child(2) td {
     border-top: none;
+}
+
+/* Move footer labels to the right */
+.schedule tfoot tr td:first-child {
+    padding-left: 20px; /* Adjust this value as needed */
+    text-align: right;
 }
