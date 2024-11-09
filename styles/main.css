@@ -199,6 +199,11 @@ footer p {
     border-bottom: 1px solid #800000;
 }
 
+/* Add a border between the 2017 and 2018 rows */
+.schedule tbody tr.year-divider td {
+    border-bottom: 1px solid #800000;
+}
+
 /* Styling for table footer */
 .schedule tfoot td {
     font-weight: bold;
