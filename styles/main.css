@@ -175,8 +175,7 @@ footer p {
 }
 
 .schedule th, .schedule td {
-    border-top: 1px solid #800000; /* only keep top border */
-    border-bottom: 1px solid #800000; /* only keep bottom border */
+    border: 1px solid #800000;
     padding: 8px;
     text-align: left;
 }
@@ -186,10 +185,20 @@ footer p {
     color: black;
 }
 
-/* Remove vertical borders by not applying left and right borders */
+/* Remove horizontal borders within the table body */
 .schedule tbody tr td {
-    border-left: none; /* remove left border */
-    border-right: none; /* remove right border */
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Remove top border between specific rows (2017 and 2018) */
+.schedule tbody tr.no-border-top td {
+    border-top: none;
+}
+
+/* Remove bottom border after specific row (April 18) */
+.schedule tbody tr.no-border-bottom td {
+    border-bottom: none;
 }
 
 /* Retain top and bottom borders for entire table */
@@ -209,5 +218,4 @@ footer p {
 .schedule tfoot td {
     font-weight: bold;
     border: 1px solid #800000;
-    border-top: none; /* Remove top border from footer */
 }
