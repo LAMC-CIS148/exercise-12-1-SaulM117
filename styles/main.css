@@ -180,9 +180,12 @@ footer p {
     text-align: left;
 }
 
-/* Add back specific horizontal borders as needed */
+/* Add a top border to the header row */
+.schedule thead tr {
+    border-top: 2px solid #800000; /* Adjust thickness and color as needed */
+}
 
-/* Retain top border for the first row */
+/* Retain top border for the first row in tbody */
 .schedule tbody tr:first-child td {
     border-top: 1px solid #800000;
 }
