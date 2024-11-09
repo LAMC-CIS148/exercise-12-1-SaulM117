@@ -175,42 +175,35 @@ footer p {
 }
 
 .schedule th, .schedule td {
-    border: 1px solid #800000;
+    border: none; /* Remove all borders initially */
     padding: 8px;
     text-align: left;
 }
 
-.schedule th {
-    background-color: none;
-    color: black;
-}
+/* Add back specific horizontal borders as needed */
 
-/* Remove horizontal borders within the table body */
-.schedule tbody tr td {
-    border-top: none;
-    border-bottom: none;
-}
-
-/* Retain top and bottom borders for entire table */
+/* Retain top border for the first row */
 .schedule tbody tr:first-child td {
     border-top: 1px solid #800000;
 }
-.schedule tbody tr:last-child td {
-    border-bottom: 1px solid #800000;
-}
 
-/* Add a border between the 2017 and 2018 rows */
+/* Add horizontal divider between 2017 and 2018 */
 .schedule tbody tr.year-divider td {
     border-bottom: 1px solid #800000;
 }
 
-/* Styling for table footer */
-.schedule tfoot td {
-    font-weight: bold;
-    border: 1px solid #800000;
+/* Retain bottom border for the last row */
+.schedule tbody tr:last-child td {
+    border-bottom: 1px solid #800000;
 }
 
-/* Remove horizontal border between specific footer rows */
+/* Table footer: Only retain horizontal borders */
+.schedule tfoot tr td {
+    font-weight: bold;
+    border-top: 1px solid #800000;
+}
+
+/* Remove top border for the "Cost of a season luncheon ticket" row */
 .schedule tfoot tr:nth-child(2) td {
     border-top: none;
 }
