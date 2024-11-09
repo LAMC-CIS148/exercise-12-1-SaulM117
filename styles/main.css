@@ -175,27 +175,42 @@ footer p {
 }
 
 .schedule th, .schedule td {
+    border: 1px solid #800000;
     padding: 8px;
     text-align: left;
 }
 
-/* Remove vertical borders */
-.schedule th, .schedule td {
-    border: none;
+.schedule th {
+    background-color: none;
+    color: black;
 }
 
-/* Add horizontal borders */
-.schedule tbody tr.year-divider td {
-    border-bottom: 2px solid #800000; /* Horizontal line between 2017 and 2018 */
+/* Remove horizontal borders within the table body */
+.schedule tbody tr td {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Retain top and bottom borders for entire table */
+.schedule tbody tr:first-child td {
+    border-top: 1px solid #800000;
+}
+.schedule tbody tr:last-child td {
+    border-bottom: 1px solid #800000;
 }
 
 /* Add a border between the 2017 and 2018 rows */
-.schedule tbody tr:first-child td {
-    border-top: 2px solid #800000; /* Top border for first row */
+.schedule tbody tr.year-divider td {
+    border-bottom: 1px solid #800000;
 }
 
 /* Styling for table footer */
 .schedule tfoot td {
     font-weight: bold;
     border: 1px solid #800000;
+}
+
+/* Remove horizontal border between specific footer rows */
+.schedule tfoot tr:nth-child(2) td {
+    border-top: none;
 }
